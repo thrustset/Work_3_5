@@ -1,0 +1,3 @@
+/home/polina/Документы/GIMP Projects/11/MIPT/Programs/2 семестр/Work_3_5/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/polina/Документы/GIMP Projects/11/MIPT/Programs/2 семестр/Work_3_5/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/polina/Документы/GIMP Projects/11/MIPT/Programs/2 семестр/Work_3_5/cmake-build-debug/CMakeFiles/Work_3_5.dir

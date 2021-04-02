@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/polina/Документы/GIMP Projects/11/MIPT/Programs/2 семестр/Work_3_5/main.cpp
+iostream
+-
+cmath
+-
+vec.hpp
+/home/polina/Документы/GIMP Projects/11/MIPT/Programs/2 семестр/Work_3_5/vec.hpp
+
+/home/polina/Документы/GIMP Projects/11/MIPT/Programs/2 семестр/Work_3_5/vec.hpp
+

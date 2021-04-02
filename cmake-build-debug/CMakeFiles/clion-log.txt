@@ -1,0 +1,4 @@
+/home/polina/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/203.7717.62/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home/polina/Документы/GIMP Projects/11/MIPT/Programs/2 семестр/Work_3_5"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/polina/Документы/GIMP Projects/11/MIPT/Programs/2 семестр/Work_3_5/cmake-build-debug

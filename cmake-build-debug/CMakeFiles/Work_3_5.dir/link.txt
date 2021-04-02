@@ -1,0 +1,1 @@
+/sbin/c++  -g   CMakeFiles/Work_3_5.dir/main.cpp.o CMakeFiles/Work_3_5.dir/vec.cpp.o  -o Work_3_5 
