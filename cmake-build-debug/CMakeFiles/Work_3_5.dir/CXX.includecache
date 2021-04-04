@@ -6,15 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/polina/Документы/GIMP Projects/11/MIPT/Programs/2 семестр/Work_3_5/func.cpp
+/home/polina/Документы/GIMP Projects/11/MIPT/Programs/2 семестр/Work_3_5/func.hpp
+iostream
+-
+cmath
+-
+
+/home/polina/Документы/GIMP Projects/11/MIPT/Programs/2 семестр/Work_3_5/main.cpp
+iostream
+-
+fstream
+-
+cmath
+-
 vec.hpp
 /home/polina/Документы/GIMP Projects/11/MIPT/Programs/2 семестр/Work_3_5/vec.hpp
 func.hpp
 /home/polina/Документы/GIMP Projects/11/MIPT/Programs/2 семестр/Work_3_5/func.hpp
-
-/home/polina/Документы/GIMP Projects/11/MIPT/Programs/2 семестр/Work_3_5/func.hpp
-iostream
--
 
 /home/polina/Документы/GIMP Projects/11/MIPT/Programs/2 семестр/Work_3_5/vec.hpp
 iostream

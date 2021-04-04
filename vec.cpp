@@ -130,6 +130,10 @@ auto Vec::mean(double (*func)(double)) const -> double {
     return sum / len;
 }
 
+auto Vec::getValue(int i) -> double {
+    return value[i];
+}
+
 auto Vec::getModified(double (*func)(double)) -> Vec & {
     if(func) {
         for(int i = 0; i < len; i++)

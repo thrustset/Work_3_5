@@ -31,6 +31,7 @@ auto main() -> int {
 
     auto myExpFunc = Func(numOfVectors, vectors);
     std::cout << myExpFunc;
+    std::cout << myExpFunc.interceptTerm(myExp) << " + " << myExpFunc.linearTerm(myExp) << " * f(x)\n";
 
     fin.close();
     fout.close();

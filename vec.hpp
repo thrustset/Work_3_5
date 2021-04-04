@@ -25,6 +25,7 @@ public:
     friend auto operator>>(std::istream &is, Vec &vec) -> std::istream &;
 
     auto mean(double (*func)(double) = nullptr) const -> double;
+    auto getValue(int i) -> double;
     auto getModified(double (*func)(double) = nullptr) -> Vec &;
 };
 
