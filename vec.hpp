@@ -1,11 +1,14 @@
+#pragma once
+#include <iostream>
+#include <cmath>
+
 class Vec {
 private:
-    char name;
     int len;
     double *value;
 public:
     Vec();
-    Vec(char name, int len, const double *value);
+    Vec(int len, const double *value);
     Vec(Vec const &source);
     ~Vec();
 
@@ -20,10 +23,6 @@ public:
 
     friend auto operator<<(std::ostream &os, Vec const &vec) -> std::ostream &;
     friend auto operator>>(std::istream &is, Vec &vec) -> std::istream &;
-
-    auto getName() const -> char;
-    auto setName(char newName) -> void;
-    auto increaseName() -> void;
 
     auto mean(double (*func)(double) = nullptr) const -> double;
     auto getModified(double (*func)(double) = nullptr) -> Vec &;

@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/polina/Документы/GIMP Projects/11/MIPT/Programs/2 семестр/Work_3_5/func.cpp" "/home/polina/Документы/GIMP Projects/11/MIPT/Programs/2 семестр/Work_3_5/cmake-build-debug/CMakeFiles/Work_3_5.dir/func.cpp.o"
   "/home/polina/Документы/GIMP Projects/11/MIPT/Programs/2 семестр/Work_3_5/main.cpp" "/home/polina/Документы/GIMP Projects/11/MIPT/Programs/2 семестр/Work_3_5/cmake-build-debug/CMakeFiles/Work_3_5.dir/main.cpp.o"
   "/home/polina/Документы/GIMP Projects/11/MIPT/Programs/2 семестр/Work_3_5/vec.cpp" "/home/polina/Документы/GIMP Projects/11/MIPT/Programs/2 семестр/Work_3_5/cmake-build-debug/CMakeFiles/Work_3_5.dir/vec.cpp.o"
   )

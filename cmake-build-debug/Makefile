@@ -143,6 +143,33 @@ Work_3_5/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Work_3_5.dir/build.make CMakeFiles/Work_3_5.dir/build
 .PHONY : Work_3_5/fast
 
+func.o: func.cpp.o
+
+.PHONY : func.o
+
+# target to build an object file
+func.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Work_3_5.dir/build.make CMakeFiles/Work_3_5.dir/func.cpp.o
+.PHONY : func.cpp.o
+
+func.i: func.cpp.i
+
+.PHONY : func.i
+
+# target to preprocess a source file
+func.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Work_3_5.dir/build.make CMakeFiles/Work_3_5.dir/func.cpp.i
+.PHONY : func.cpp.i
+
+func.s: func.cpp.s
+
+.PHONY : func.s
+
+# target to generate assembly for a file
+func.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Work_3_5.dir/build.make CMakeFiles/Work_3_5.dir/func.cpp.s
+.PHONY : func.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -206,6 +233,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Work_3_5"
+	@echo "... func.o"
+	@echo "... func.i"
+	@echo "... func.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

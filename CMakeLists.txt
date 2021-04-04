@@ -3,4 +3,4 @@ project(Work_3_5)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Work_3_5 main.cpp vec.cpp vec.hpp)
+add_executable(Work_3_5 main.cpp vec.cpp vec.hpp func.cpp func.hpp)

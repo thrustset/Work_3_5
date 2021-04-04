@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/polina/Документы/GIMP Projects/11/MIPT/Programs/2 семестр/Work_3_5/func.cpp">
+			<Option target="Work_3_5"/>
+		</Unit>
+		<Unit filename="/home/polina/Документы/GIMP Projects/11/MIPT/Programs/2 семестр/Work_3_5/func.hpp">
+			<Option target="Work_3_5"/>
+		</Unit>
 		<Unit filename="/home/polina/Документы/GIMP Projects/11/MIPT/Programs/2 семестр/Work_3_5/main.cpp">
 			<Option target="Work_3_5"/>
 		</Unit>

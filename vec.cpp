@@ -1,11 +1,8 @@
-#include <iostream>
-#include <cmath>
 #include "vec.hpp"
 
-Vec::Vec() : name{0}, len{0}, value{nullptr} {}
+Vec::Vec() : len{0}, value{nullptr} {}
 
-Vec::Vec(char name, int len, const double *value) :
-    name{name},
+Vec::Vec(int len, const double *value) :
     len{len},
     value{new double[len]}
 {
@@ -14,7 +11,6 @@ Vec::Vec(char name, int len, const double *value) :
 }
 
 Vec::Vec(Vec const &source) :
-    name{source.name},
     len{source.len},
     value{new double[len]}
 {
@@ -27,7 +23,6 @@ Vec::~Vec() {
 }
 
 auto Vec::operator=(Vec const &source) -> Vec & {
-    name = source.name;
     len = source.len;
 
     delete [] value;
@@ -39,7 +34,6 @@ auto Vec::operator=(Vec const &source) -> Vec & {
 }
 
 auto Vec::operator+(Vec const &source) const -> Vec {
-    char newName = fmax(name, source.name) + 1;
     int newLen = len + source.len;
     auto *newValue = new double[newLen];
 
@@ -49,11 +43,10 @@ auto Vec::operator+(Vec const &source) const -> Vec {
     for(; i < newLen; i++)
         newValue[i] = source.value[i - len];
 
-    return Vec(newName, newLen, newValue);
+    return Vec(newLen, newValue);
 }
 
 auto Vec::operator+=(Vec const &source) -> Vec & {
-    name = fmax(name, source.name) + 1;
     int newLen = len + source.len;
     auto *newValue = new double[newLen];
 
@@ -74,7 +67,6 @@ auto Vec::operator+=(Vec const &source) -> Vec & {
 
 auto Vec::operator*(double coefficient) const -> Vec {
     auto vec = Vec(*this);
-    vec.increaseName();
     for(int i = 0; i < len; i++)
         vec.value[i] *= coefficient;
     return vec;
@@ -99,18 +91,18 @@ auto Vec::operator*(Vec const &source) const -> double {
 }
 
 auto operator<<(std::ostream &os, Vec const &vec) -> std::ostream & {
-    os << "Vector " << vec.name << ":\n";
     int n = vec.len;
-    for(int i = 0; i < n; i++) {
-        os << "\tvalue[" << i << "] = " << vec.value[i] << "\n";
+
+    os << "[";
+    for(int i = 0; i < n - 1; i++) {
+        os << vec.value[i] << "; ";
     }
+    os << vec.value[n - 1] << "]\n";
+
     return os;
 }
 
 auto operator>>(std::istream &is, Vec &vec) -> std::istream & {
-    std::cout << "Input name: ";
-    is >> vec.name;
-
     std::cout << "Input len: ";
     is >> vec.len;
 
@@ -123,18 +115,6 @@ auto operator>>(std::istream &is, Vec &vec) -> std::istream & {
         is >> vec.value[i];
     }
     return is;
-}
-
-auto Vec::getName() const -> char {
-    return name;
-}
-
-auto Vec::setName(char newName) -> void {
-    name = newName;
-}
-
-auto Vec::increaseName() -> void {
-    this->setName(name + 1);
 }
 
 auto Vec::mean(double (*func)(double)) const -> double {
@@ -159,12 +139,11 @@ auto Vec::getModified(double (*func)(double)) -> Vec & {
 }
 
 auto printScalarProduct(Vec const &vec1, Vec const &vec2) -> void {
-    std::cout << vec1.getName() << " * " << vec2.getName() << " = ";
-    std::cout << vec1 * vec2 << "\n";
+    std::cout << "Scalar product:\t" << vec1 * vec2 << "\n";
 }
 
 auto printMean(Vec const &vec, double (*func)(double)) -> void {
-    std::cout << "Mean of " << vec.getName() << " vector:\t" << vec.mean(func) << "\n";
+    std::cout << "Mean of vector:\t" << vec.mean(func) << "\n";
 }
 
 

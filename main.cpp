@@ -1,26 +1,38 @@
 #include <iostream>
+#include <fstream>
 #include <cmath>
 #include "vec.hpp"
+#include "func.hpp"
+
+double myExp(double arg) {
+    return exp(-pow((arg - 5), 2));
+}
 
 auto main() -> int {
-    int len = 3;
-    auto *array = new double[len];
-    for(int i = 0; i < len; i++)
-        array[i] = 2 * i + 1;
+    std::ifstream fin("5_InitialData.txt");
+    std::ofstream fout("output.txt");
 
-    auto vec1 = Vec('A', len, array);
-    delete [] array;
+    int len = 2;
 
-    auto vec2 = vec1 * 2;
+    int numOfVectors;
+    fin >> numOfVectors;
+    fout << numOfVectors << "\n";
 
-    std::cout << vec1;
-    std::cout << vec2;
+    auto **array = new double*[numOfVectors];
+    for(int i = 0; i < numOfVectors; i++) {
+        array[i] = new double[len];
+        for(int j = 0; j < len; j++)
+            fin >> array[i][j];
+    }
 
-    printScalarProduct(vec1, vec2);
+    auto *vectors = new Vec[numOfVectors];
+    for(int i = 0; i < numOfVectors; i++)
+        vectors[i] = Vec(len, array[i]);
 
-    std::cout << vec1.getModified(sqrt);
-    printMean(vec1);
-    printMean(vec2, sqrt);
+    auto myExpFunc = Func(numOfVectors, vectors);
+    std::cout << myExpFunc;
 
+    fin.close();
+    fout.close();
     return 0;
 }
