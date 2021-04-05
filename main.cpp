@@ -4,8 +4,12 @@
 #include "vec.hpp"
 #include "func.hpp"
 
-double myExp(double arg) {
+auto myExp(double arg) -> double {
     return exp(-pow((arg - 5), 2));
+}
+
+auto printMyExp() -> void {
+    std::cout << "exp(-(x - 5)^2)";
 }
 
 auto main() -> int {
@@ -31,7 +35,9 @@ auto main() -> int {
 
     auto myExpFunc = Func(numOfVectors, vectors);
     std::cout << myExpFunc;
-    std::cout << myExpFunc.interceptTerm(myExp) << " + " << myExpFunc.linearTerm(myExp) << " * f(x)\n";
+    std::cout << myExpFunc.interceptTerm(myExp) << " + " << myExpFunc.linearTerm(myExp) << " * ";
+    printMyExp();
+    std::cout << "\n";
 
     fin.close();
     fout.close();
